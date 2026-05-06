@@ -6,69 +6,64 @@
     <title>Presupuesto de Financiación - Car One</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             padding: 20px;
+            color: #333;
         }
         .container {
             background-color: white;
-            width: 500px;
+            width: 100%;
+            max-width: 600px;
             padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
-        .logo-box {
-            background-color: #0072bc;
-            color: white;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 5px;
-        }
-        .logo-box svg {
-            width: 60px;
-            fill: white;
-        }
-        .logo-text {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 0.9;
+        /* Estilo para el logo oficial */
+        .logo-oficial {
+            width: 180px; /* Ajusta el tamaño según necesites */
+            height: auto;
+            margin-bottom: 10px;
         }
         h1 {
-            font-size: 22px;
-            margin-top: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #000;
         }
         .form-group {
             display: flex;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             align-items: flex-end;
         }
         .form-group label {
-            font-weight: normal;
-            white-space: nowrap;
+            font-size: 15px;
             margin-right: 10px;
+            white-space: nowrap;
         }
         .form-group input {
             border: none;
-            border-bottom: 1px solid #999;
+            border-bottom: 1px solid #ccc;
             flex-grow: 1;
             padding: 2px 5px;
             outline: none;
-            font-size: 14px;
+            font-size: 15px;
+            background-color: transparent;
         }
+        .form-group input:focus {
+            border-bottom: 2px solid #0072bc;
+        }
+        /* Configuración para imprimir */
         @media print {
-            body { background-color: white; }
-            .container { box-shadow: none; width: 100%; }
-            input { border-bottom: 1px solid #000 !important; }
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; }
+            .form-group input { border-bottom: 1px solid #000; }
         }
     </style>
 </head>
@@ -76,10 +71,8 @@
 
 <div class="container">
     <div class="header">
-        <div class="logo-box">
-            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
-            <div class="logo-text">CAR<br>ONE</div>
-        </div>
+        <!-- Aquí se carga tu logo oficial subido al repositorio -->
+        <img src="logo-carone.png" alt="Car One Logo" class="logo-oficial">
         <h1>Presupuesto de Financiación</h1>
     </div>
 
